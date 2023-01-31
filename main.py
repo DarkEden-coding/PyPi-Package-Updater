@@ -85,5 +85,7 @@ install = input("Install new version? (y/n): ")
 if install == "y":
     print("Installing new version...")
     sleep(10)
-    subprocess.call(cmd3, shell=True)
+    for i in range(5):
+        subprocess.call(cmd3, shell=True)
+        sleep(1)
     print("Done!")

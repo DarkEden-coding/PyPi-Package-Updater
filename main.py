@@ -2,6 +2,7 @@ import os
 import shutil
 from dotenv import load_dotenv
 import subprocess
+from time import sleep
 
 
 def remove_build_files(input_dir):
@@ -82,5 +83,7 @@ subprocess.call(cmd2, cwd=input_dir, shell=True)
 install = input("Install new version? (y/n): ")
 
 if install == "y":
+    print("Installing new version...")
+    sleep(10)
     subprocess.call(cmd3, shell=True)
     print("Done!")
